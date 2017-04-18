@@ -25,5 +25,16 @@ public class FinalPracticeUnitTests
         assertEquals(20, Helper.FahrenheitToCelsius(68), 0.01);
     }
 
-    
+    /*
+     * Check if a temperature is above, below or at freezing
+     */
+    @Test
+    public void Test2Freezing()
+    {
+    	assertEquals("at freezing", Helper.isFreezing(32));
+    	assertEquals("below freezing", Helper.isFreezing(0));
+    	assertEquals("below freezing", Helper.isFreezing(20));
+    	assertEquals("above freezing", Helper.isFreezing(40));
+    	assertEquals("above freezing", Helper.isFreezing(100));
+    }
 }

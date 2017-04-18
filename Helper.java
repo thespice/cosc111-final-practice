@@ -14,4 +14,14 @@ public class Helper
     {
         return 0;
     }
+    
+    /*
+     * Returns below freezing is the temperature is below freezing and
+     * above freezing if temperature is above freezing. If exactly at freezing
+     * return at freezing.
+     */
+    public static String isFreezing(double temperature_in_fahrenheit)
+    {
+    	return "";
+    }
 }
