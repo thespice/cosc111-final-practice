@@ -42,4 +42,25 @@ public class Helper
     {
     	return 0;
     }
+    
+    /*
+     * Calculate the sum of the first n numbers
+     */
+    static int SumFrom0(int n)
+    {
+    	int sum = 0;
+    	for (int i=0; i<n; i++)
+    		sum += (i+1);
+    	return sum;
+    }
+    
+    /*
+     * Calculate the sum of the first n numbers of n1, n2 and n3. 
+     * Then, return their sum.
+     * Use the function sumFrom0 defined above.
+     */
+    public static int SumofSumFrom0(int n1, int n2, int n3)
+    {
+    	return 0;
+    }
 }

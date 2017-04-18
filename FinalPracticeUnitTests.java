@@ -60,4 +60,16 @@ public class FinalPracticeUnitTests
     	double[] values3 = {5.0, 1.0, -2.0, -4.0, 3.0};
     	assertEquals(9.0, Helper.FindRange(values3), 0.01);
     }
+    
+    /*
+     * Sum the sum of first n numbers
+     */
+    @Test
+    public void Test5SumOfSum()
+    {
+    	assertEquals(3, Helper.SumofSumFrom0(1, 1, 1));
+    	assertEquals(5, Helper.SumofSumFrom0(1, 1, 2));
+    	assertEquals(5, Helper.SumofSumFrom0(1, 2, 1));
+    	assertEquals(10, Helper.SumofSumFrom0(3, 2, 1));
+    }
 }
