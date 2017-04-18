@@ -45,6 +45,7 @@ public class FinalPracticeUnitTests
     	assertEquals(24, Helper.SmallestNumberDivisibleBy(6, 8));
     	assertEquals(40, Helper.SmallestNumberDivisibleBy(10, 8));
     	assertEquals(30, Helper.SmallestNumberDivisibleBy(6, 10));
+    	assertEquals(21, Helper.SmallestNumberDivisibleBy(3, 7));
     }
     
     /*
@@ -71,5 +72,78 @@ public class FinalPracticeUnitTests
     	assertEquals(5, Helper.SumofSumFrom0(1, 1, 2));
     	assertEquals(5, Helper.SumofSumFrom0(1, 2, 1));
     	assertEquals(10, Helper.SumofSumFrom0(3, 2, 1));
+    }
+    
+    /*
+     * Test toString function of Circle is correct
+     */
+    @Test
+    public void Test6ShapeToString()
+    {
+    	Shape c1 = new Circle(10);
+    	assertEquals("Circle (r=10)", c1.toString());
+    	Shape c2 = new Circle(1);
+    	assertEquals("Circle (r=1)", c2.toString());
+    }
+    
+    /*
+     * Test that the car is initialized properly and that
+     * the monthly payment over 60 months is calculated
+     * correctly.
+     */
+    @Test
+    public void Test7CarPayments()
+    {
+    	Car c1 = new Car("Ford Focus 2017", 15000);
+    	assertEquals("Ford Focus 2017", c1.getName());
+    	assertEquals(15000, c1.getPrice(), .01);
+    	assertEquals(250, c1.getMonthly_payment(), 0.01);
+    	
+    	Car c2 = new Car("Ford Escape 2017", 20000);
+    	assertEquals("Ford Escape 2017", c2.getName());
+    	assertEquals(20000, c2.getPrice(), .01);
+    	assertEquals(333.333, c2.getMonthly_payment(), .01);
+    }
+    
+    /*
+     * Test that the random number between max and min
+     * are generated for different max and mins.
+     */
+    @Test
+    public void Test8GenerateRandom()
+    {
+    	int i1 = Helper.generateRandom(4, 10);
+    	assertTrue(i1 >= 4 && i1 <= 10);
+    	i1 = Helper.generateRandom(4, 10);
+    	assertTrue(i1 >= 4 && i1 <= 10);
+    	int i2 = Helper.generateRandom(25, 100);
+    	assertTrue(i2 >= 25 && i2 <= 100);
+    	i2 = Helper.generateRandom(25, 100);
+    	assertTrue(i2 >= 25 && i2 <= 100);
+    	int i3 = Helper.generateRandom(-10, 30);
+    	assertTrue(i3 >= 10 && i3 <= 30);
+    	i3 = Helper.generateRandom(-10, 30);
+    	assertTrue(i3 >= 10 && i3 <= 30);
+    }
+    
+    /*
+     * Tests that the returned array has the right length and the
+     * array is filled with the right numbers
+     */
+    @Test
+    public void Test9CreateArray()
+    {
+    	int[] data1 = Helper.createArrayWithConsecutiveNumbers(1, 5);
+    	assertEquals(5, data1.length);
+    	for (int i=0; i<data1.length; i++)
+    		assertEquals(1+i, data1[i]);
+    	int[] data2 = Helper.createArrayWithConsecutiveNumbers(-5, 5);
+    	assertEquals(11, data2.length);
+    	for (int i=0; i<data2.length; i++)
+    		assertEquals(-5+i, data2[i]);
+    	int[] data3 = Helper.createArrayWithConsecutiveNumbers(10, 20);
+    	assertEquals(11, data3.length);
+    	for (int i=0; i<data2.length; i++)
+    		assertEquals(10+i, data2[i]);
     }
 }
