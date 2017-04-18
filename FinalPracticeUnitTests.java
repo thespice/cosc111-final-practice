@@ -37,4 +37,14 @@ public class FinalPracticeUnitTests
     	assertEquals("above freezing", Helper.isFreezing(40));
     	assertEquals("above freezing", Helper.isFreezing(100));
     }
+    
+    /*
+     * Find the smallest number that is divisible by both the given numbers.
+     */
+    public void Test3FindSmallestNumberDivisible()
+    {
+    	assertEquals(24, Helper.SmallestNumberDivisibleBy(6, 8));
+    	assertEquals(40, Helper.SmallestNumberDivisibleBy(10, 8));
+    	assertEquals(30, Helper.SmallestNumberDivisibleBy(6, 10));
+    }
 }

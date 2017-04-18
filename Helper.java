@@ -24,4 +24,12 @@ public class Helper
     {
     	return "";
     }
+    
+    /*
+     * Find the smallest number that is divisible by all the numbers n1, n2 and n3
+     */
+    public static int SmallestNumberDivisibleBy (int n1, int n2)
+    {
+    	return -1;
+    }
 }
