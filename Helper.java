@@ -26,10 +26,20 @@ public class Helper
     }
     
     /*
-     * Find the smallest number that is divisible by all the numbers n1, n2 and n3
+     * Find the smallest number that is divisible by both n1 and n2
      */
     public static int SmallestNumberDivisibleBy (int n1, int n2)
     {
     	return -1;
+    }
+    
+    /*
+     * Find the range of the array.
+     * The range is the difference between the biggest and the smallest value in
+     * the array.
+     */
+    public static double FindRange(double[] values)
+    {
+    	return 0;
     }
 }

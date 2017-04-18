@@ -1,8 +1,6 @@
 
 
 import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -41,10 +39,25 @@ public class FinalPracticeUnitTests
     /*
      * Find the smallest number that is divisible by both the given numbers.
      */
+    @Test
     public void Test3FindSmallestNumberDivisible()
     {
     	assertEquals(24, Helper.SmallestNumberDivisibleBy(6, 8));
     	assertEquals(40, Helper.SmallestNumberDivisibleBy(10, 8));
     	assertEquals(30, Helper.SmallestNumberDivisibleBy(6, 10));
+    }
+    
+    /*
+     * Find the range of an array
+     */
+    @Test
+    public void Test4FindArrayRange()
+    {
+    	double[] values1 = {0.0, 10.0};
+    	assertEquals(10.0, Helper.FindRange(values1), 0.01);
+    	double[] values2 = {1.0, 2.0, 3.0, 4.0};
+    	assertEquals(3.0, Helper.FindRange(values2), 0.01);
+    	double[] values3 = {5.0, 1.0, -2.0, -4.0, 3.0};
+    	assertEquals(9.0, Helper.FindRange(values3), 0.01);
     }
 }
